@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 const tasksService = require('../services/tasksService');
+const validate = require('../validations/validateTasks');
 
 router.get('/tasks', async (req, res) => {
     const tasks = await tasksService.getTasks();
@@ -12,6 +13,7 @@ router.get('/tasks', async (req, res) => {
 });
 
 router.post('/tasks',
+validate.validateInputs,
 async (req, res) => {
     const { task, status } = req.body;
 
@@ -21,6 +23,8 @@ async (req, res) => {
 });
 
 router.put('/tasks/:id',
+validate.validateInputId,
+validate.validateInputs,
 async (req, res) => {
     const { id } = req.params;
     const { task, status } = req.body;
@@ -31,6 +35,7 @@ async (req, res) => {
 });
 
 router.delete('/tasks/:id',
+validate.validateInputId,
 async (req, res) => {
     const { id } = req.params;
 
