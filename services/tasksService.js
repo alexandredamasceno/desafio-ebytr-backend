@@ -7,6 +7,13 @@ const getTasks = async () => {
     return tasks;
 };
 
+const addTask = async (task, status) => {
+    const newTask = await tasksModel.addNewTask(task, status);
+
+    return newTask;
+};
+
 module.exports = {
     getTasks,
+    addTask,
 };
