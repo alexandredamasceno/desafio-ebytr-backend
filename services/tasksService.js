@@ -20,8 +20,15 @@ const taskUpdate = async (id, task, status) => {
     return { id, task, status };
 };
 
+const taskDelete = async (id) => {
+    const taskDeleted = await tasksModel.deleteTask(id);
+
+    return taskDeleted.value;
+};
+
 module.exports = {
     getTasks,
     addTask,
     taskUpdate,
+    taskDelete,
 };

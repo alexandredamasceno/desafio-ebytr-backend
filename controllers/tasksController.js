@@ -30,4 +30,13 @@ async (req, res) => {
     return res.status(200).json(updatedTask);
 });
 
+router.delete('/tasks/:id',
+async (req, res) => {
+    const { id } = req.params;
+
+    const deletedTask = await tasksService.taskDelete(id);
+
+    return res.status(200).json(deletedTask);
+});
+
 module.exports = router;
