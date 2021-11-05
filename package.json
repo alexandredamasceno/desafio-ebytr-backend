@@ -1,0 +1,32 @@
+{
+  "name": "desafio-ebytr-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandredamasceno/desafio-ebytr-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandredamasceno/desafio-ebytr-backend/issues"
+  },
+  "homepage": "https://github.com/alexandredamasceno/desafio-ebytr-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "eslint-config-trybe-backend": "^1.0.4",
+    "nodemon": "^2.0.14"
+  }
+}
